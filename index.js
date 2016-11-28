@@ -34,7 +34,7 @@ module.exports = function(content) {
 	});
 
 	var parameter = this.resourceQuery || '';
-	if (query.queryname && parameter.indexOf("?") == 0) {
+	if (query.queryname == 1 && parameter.indexOf("?") == 0) {
 		var arrUrl = url.split("."), arrUrlLen = arrUrl.length;
 		parameter = parameter.replace("?", ".");
 		var newUrl = "";
@@ -49,6 +49,8 @@ module.exports = function(content) {
 			}
 		}
 		url = newUrl;
+	} else if (query.queryname == 2) {
+		url += parameter;
 	}
 
 	var publicPath = "__webpack_public_path__ + " + JSON.stringify(url);
