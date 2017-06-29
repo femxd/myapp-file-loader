@@ -5,6 +5,7 @@
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 myapp-file-loader is as same as [file-loader](https://github.com/webpack/file-loader)
+base on file-loader@0.10.0
 
 ## Filename templates
 
